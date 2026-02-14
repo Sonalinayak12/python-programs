@@ -1,0 +1,83 @@
+emp_details = (
+    ("EmpID", input("Enter Employee ID: ")),
+    ("EmpName", input("Enter Employee Name: ")),
+    ("EmpAge", int(input("Enter Employee Age: "))),
+    ("EmpCity", input("Enter Employee City: "))
+)
+
+dict1 = dict(emp_details)
+
+print("\nDictionary is :", dict1)
+
+print("\nEmployee Name is :", dict1["EmpName"])
+print("\nEmployee City is :", dict1["EmpCity"])
+
+print("\nAll Keys in Dictionary")
+for x in dict1:
+    print(x)
+
+print("\nAll Values in Dictionary")
+for x in dict1:
+    print(dict1[x])
+
+dict1["Phno"] = int(input("\nEnter Phone Number: "))
+print("\nUpdated Dictionary is :", dict1)
+
+dict1["EmpName"] = input("\nEnter New Employee Name: ")
+print("\nUpdated Dictionary is :", dict1)
+
+dict1.pop("EmpAge")
+print("\nUpdated Dictionary is :", dict1)
+print("Length of Dictionary is :", len(dict1))
+
+dict2 = dict1.copy()
+print("\nNew Dictionary is :", dict2)
+
+dict1.clear()
+print("\nUpdated Dictionary is :", dict1)
+
+
+
+
+
+
+
+OUTPUT:-
+Enter Employee ID: 132
+Enter Employee Name: Anu
+Enter Employee Age: 24
+Enter Employee City: Coimbatore
+
+Dictionary is : {'EmpID': '132', 'EmpName': 'Anu', 'EmpAge': 24, 'EmpCity': 'Coimbatore'}
+
+Employee Name is : Anu
+
+Employee City is : Coimbatore
+
+All Keys in Dictionary
+EmpID
+EmpName
+EmpAge
+EmpCity
+
+All Values in Dictionary
+132
+Anu
+24
+Coimbatore
+
+Enter Phone Number: 9876543210
+
+Updated Dictionary is : {'EmpID': '132', 'EmpName': 'Anu', 'EmpAge': 24, 'EmpCity': 'Coimbatore', 'Phno': 9876543210}
+
+Enter New Employee Name: Aishwarya
+
+Updated Dictionary is : {'EmpID': '132', 'EmpName': 'Aishwarya', 'EmpAge': 24, 'EmpCity': 'Coimbatore', 'Phno': 9876543210}
+
+Updated Dictionary is : {'EmpID': '132', 'EmpName': 'Aishwarya', 'EmpCity': 'Coimbatore', 'Phno': 9876543210}
+Length of Dictionary is : 4
+
+New Dictionary is : {'EmpID': '132', 'EmpName': 'Aishwarya', 'EmpCity': 'Coimbatore', 'Phno': 9876543210}
+
+Updated Dictionary is : {}
+
